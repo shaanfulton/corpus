@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\title{Translating Positional Number Systems}
+\author{Shaan Fulton}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Convert to Decimal}
+
+To convert a number from any base-$b$ to decimal:
+\begin{enumerate}
+    \item List the digits.
+    \item Multiply each digit by $b$ raised to the power of its position (counting from right, starting at 0).
+    \item Add all the results.
+\end{enumerate}
+
+\subsection*{Binary Example (Base 2)}
+
+Convert \(1101_2\) to decimal:
+\[
+1101_2 = (1 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)
+\]
+\[
+= 8 + 4 + 0 + 1 = 13_{10}
+\]
+
+\subsection*{Hexadecimal Example (Base 16)}
+
+Convert \(\text{A5}_{16}\) to decimal (where $A = 10$ in decimal):
+\[
+\text{A5}_{16} = (10 \times 16^1) + (5 \times 16^0)
+\]
+\[
+= 160 + 5 = 165_{10}
+\]
+
+\section*{Convert from Decimal}
+
+We simply imagine the value of each position in the system we wish to convert to. We might picture this for a binary conversion of decimal 13:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    $2^3=8$ & $2^2=4$ & $2^1=2$ & $2^0=1$ \\
+    \hline
+    1 & 1 & 0 & 1 \\
+    \hline
+\end{tabular}
+\end{center}
+
+Then, we eat into our decimal value as we fill the boxes.
+
+Suppose we have 13. We begin by looking to cut as much as possible, so we might use our 8s box. Then we use the 4s box. The 2s box is too large. We finish with the 1s box. This produces \texttt{0b1101}.
+
+\subsection*{Hexadecimal Example {Base 16}}
+
+We convert 165 decimal to hexadecimal:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    $16^3=4096$ & $16^2=256$ & $16^1=16$ & $16^0=1$ \\
+    \hline
+    0 & 0 & A & 5 \\
+    \hline
+\end{tabular}
+\end{center}
+
+Here we can sometimes fill multiple boxes (A and 5 are 10 16s boxes and 5 1s boxes).
+
+
+
+\end{document}
+
