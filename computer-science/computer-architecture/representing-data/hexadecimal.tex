@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\title{Hexadecimals as an Effective Shorthand for Binary}
+\author{Shaan Fulton}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+We discuss how a base-2, binary system can be used to represent any form of data in \texttt{representing-data}. Hexadecimals provide a convenient shorthand for representing larger strings of binary data. Hexadecimal is base-16, meaning there are 16 combinations per digit. There are also 16 combinations in a string of four binary digits. Thus we can create a perfect bijection (every input maps to a unique output and every output to a unique input) between one hexadecimal digit and four binary digits. This makes writing binary much cleaner:
+
+\[
+\begin{array}{|c|c|}
+\hline
+\textbf{Hex} & \textbf{Binary (4-bit)} \\
+\hline
+0 & 0000 \\
+1 & 0001 \\
+2 & 0010 \\
+3 & 0011 \\
+4 & 0100 \\
+5 & 0101 \\
+6 & 0110 \\
+7 & 0111 \\
+8 & 1000 \\
+9 & 1001 \\
+A & 1010 \\
+B & 1011 \\
+C & 1100 \\
+D & 1101 \\
+E & 1110 \\
+F & 1111 \\
+\hline
+\end{array}
+\]
+
+Note we precede hexadecimals with \texttt{0x} and binary base-2 with \texttt{0b}. This is purely a shorthand. Hexadecimals have no real fundamental grounding in computer architecture. When we say \texttt{0xFBC} we're really just saying \texttt{0b111110111100} in a legible way.
+
+Converting between positional number system is rather intuitive. A clear mathematical method is outlined in \texttt{translating-number-systems}.
+
+\end{document}
+
