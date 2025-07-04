@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\title{The Stored Program}
+\author{Shaan Fulton}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+The first general-purpose digital computer was the ENIAC. To program the ENIAC, programmers would rewire patch cables to link up different logical switches and augment execuation order. The ENIAC did have memory, but it wasn't used to store instructions, only data. It had 20 accumulators, which consisted of binary vacuum tubes. Each represented one 10-digit decimal number.
+
+\section*{Von Neumann Architecture}
+
+John von Neumann (among others) recognized that operations could be minimized to a select few composable options whose execution order could be stored in memory, thus creating digitally reprogrammable computers whose instructions were written in bits.
+
+Von Neumann architecture is the modern standard. \textbf{It is an excellent example of early computer abstraction}: The programmer should not have to worry about timing, only execution order. By abstracting away the manual rewiring of logical operations, you not only made it faster to program a computer—you removed a layer of unnecessary detail, allowing for more mental bandwidth to be reserved for the actual computation design.
+
+\section*{The Stored Program}
+
+Before stored programs, memory was only used to store data. The processor would have a minimal instruction set, but these instructions and their execution order would be manually wired in. The key diffence with a von Neumann architecture is that instructions were now stored in memory, and their execution was facilitated by a control unit and timed by a program counter and clock.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|p{8cm}|}
+\hline
+\textbf{Component} & \textbf{Role} \\
+\hline
+\textbf{Memory} & Stores both instructions and data in a single address space. \\
+\hline
+\textbf{ALU} & Performs arithmetic and logic operations. \\
+\hline
+\textbf{Control Unit} & Fetches, decodes, and directs execution of instructions. \\
+\hline
+\textbf{Registers} & Fast, temporary storage for immediate values and operands. \\
+\hline
+\textbf{Program Counter} & Tracks the address of the next instruction to execute. \\
+\hline
+\textbf{Clock} & Provides timing signals to coordinate operations. \\
+\hline
+\end{tabular}
+\caption{Core Components of the von Neumann Architecture}
+\end{table}
+
+\end{document}
+
